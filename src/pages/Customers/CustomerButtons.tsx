@@ -5,7 +5,6 @@ import {
   setShowExpiredAccountModal,
   setShowPausedModal,
   setShowRestoreModal,
-  updateUser,
 } from "../../redux/slices/CustomerSlice";
 import { AppDispatch, RootState } from "../../redux/store";
 import Button from "../../components/Button";
@@ -34,7 +33,6 @@ function CustomerButtons({ editMode, setEditMode }: any) {
     "text-sm border rounded-[5px] m-2 border-red-600 text-red w-auto";
 
   const handleUpdate = async () => {
-    await dispatch(updateUser(customerPayload));
     setEditMode(!editMode);
   };
 

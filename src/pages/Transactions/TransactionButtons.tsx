@@ -9,17 +9,15 @@ import {
   setIsProcessTransactionOpen,
   setReviewModalOpen,
   setReturnModalOpen,
-  setToBeCancelledTransaction,
   setIsFlagTransactionOpen,
 } from "../../redux/slices/TransactionsSlice"
 import ConfirmCancelModal from "./ConfirmCancelModal"
 import ConfirmTransactionReviewModal from "./ConfirmReviewTransactionModal"
 import ConfirmUpdateModal from "./ConfirmUpdateModal"
-import ConfirmProcessingModal from "./ConfirmProcessTransaction"
 import ConfirmReturnTransactionModal from "./ConfirmReturnTransactionModal"
 import ConfirmFlagTransactionModal from "./ConfirmFlagTransactionModal"
 import ConfirmReturnV4TransactionModal from "./ConfirmReturnV4TransactionModal"
-import { TransactionStateEnum } from "../../types"
+
 interface IProps {
   refresh?: () => void
 }
@@ -85,15 +83,6 @@ function TransactionButtons({ refresh }: IProps) {
 
   return (
     <>
-      <ConfirmProcessingModal
-        refresh={refresh}
-        isModalOpen={isProcessTransactionOpen}
-        setIsConfirmOpen={(state: boolean) =>
-          dispatch(setIsProcessTransactionOpen(state))
-        }
-        setLoader={setLoading}
-        isV4Transaction={isV4Transaction}
-      />
 
       <ConfirmUpdateModal
         refresh={() => {

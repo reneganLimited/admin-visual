@@ -4,7 +4,7 @@ import { RootState } from "../../redux/store";
 import { toast } from "react-toastify";
 import SmallModal from "../../components/SmallModal";
 import { TransactionStateEnum } from "../../types";
-import { returnV4UsdCreditTransaction } from "../../apiv4";
+// import { returnV4UsdCreditTransaction } from "../../apiv4";
 interface IProps {
   isModalOpen: boolean;
   setIsConfirmOpen: (state: boolean) => void;
@@ -29,10 +29,10 @@ const ConfirmReturnTransactionModal = ({ isModalOpen, setIsConfirmOpen, refresh,
     closeModal();
     setLoader && setLoader(true);
     try {
-      await returnV4UsdCreditTransaction({
-        TransactionIdentifier: currentTransaction?.TransactionIdentifier!,
-        NewTransactionState: TransactionStateEnum.RETURNED
-      });
+      // await returnV4UsdCreditTransaction({
+      //   TransactionIdentifier: currentTransaction?.TransactionIdentifier!,
+      //   NewTransactionState: TransactionStateEnum.RETURNED
+      // });
       toast.success("Credit transaction returned!");
       refresh && (await refresh());
     } catch (error: any) {

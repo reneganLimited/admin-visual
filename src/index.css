@@ -22,7 +22,7 @@ body {
 
 @layer base {
   input, select {
-    @apply px-3 float-left sm:w-6/12 mr-1 mt-1 pr-8 text-[13px] font-bold py-3 border rounded-md shadow-sm shadow-[#d3d3d3] focus:ring-Renegan-gold focus:border-Renegan-gold h-12 !important;
+    @apply px-3 float-left sm:w-6/12 mr-1 mt-1 pr-8 text-[13px] font-bold py-3 border rounded-md shadow-sm shadow-[#d3d3d3] focus:ring-renegan-purple focus:border-renegan-purple h-12 !important;
 }
 }
 
@@ -76,38 +76,38 @@ button {
 }
 
 .input-control {
-  @apply block w-full px-3 py-3 placeholder-gray-400 border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] sm:text-sm;
+  @apply block w-full px-3 py-3 placeholder-gray-400 border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-renegan-purple focus:border-renegan-purple bg-[#F9F9F9] sm:text-sm;
 }
 
 .password-control {
-  @apply py-3 px-3 w-full placeholder-gray-400 border-r-0  rounded-l-lg border border-black shadow-sm focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9];
+  @apply py-3 px-3 w-full placeholder-gray-400 border-r-0  rounded-l-lg border border-black shadow-sm focus:outline-none focus:ring-renegan-purple focus:border-renegan-purple bg-[#F9F9F9];
 }
 .search-input {
-  @apply py-2 px-2 focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] border-black shadow-sm rounded-md placeholder:text-gray-400;
+  @apply py-2 px-2 focus:ring-renegan-purple focus:border-renegan-purple bg-[#F9F9F9] border-black shadow-sm rounded-md placeholder:text-gray-400;
 }
 .password-button {
-  @apply bg-transparent rounded-r-lg px-3 py-3 focus:outline-none border border-black focus:ring-2 focus:ring-Renegan-gold focus:border-transparent bg-[#F9F9F9];
+  @apply bg-transparent rounded-r-lg px-3 py-3 focus:outline-none border border-black focus:ring-2 focus:ring-renegan-purple focus:border-transparent bg-[#F9F9F9];
 }
 .login-active {
-  @apply flex bg-Renegan-gold justify-center w-full px-4 py-3 text-sm font-bold text-black border border-transparent rounded-md focus:outline-none;
+  @apply flex bg-renegan-purple justify-center w-full px-4 py-3 text-sm font-bold text-black border border-transparent rounded-md focus:outline-none;
 }
 .login-disabled {
   @apply flex bg-[#F9F9F9] justify-center w-full px-4 py-3 text-sm font-bold text-[#ACACAC] border border-transparent rounded-md focus:outline-none;
 }
 .PhoneInputCountrySelect {
-  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Renegan-gold h-full rounded-md border-0 bg-transparent;
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-renegan-purple h-full rounded-md border-0 bg-transparent;
 }
 .PhoneInputCountry {
   @apply absolute inset-y-0 left-0 flex items-center pl-4;
 }
 .PhoneInputInput {
-  @apply block w-full py-3 pl-[3.6rem] border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] sm:text-sm;
+  @apply block w-full py-3 pl-[3.6rem] border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-renegan-purple focus:border-renegan-purple bg-[#F9F9F9] sm:text-sm;
 }
 .register-card {
   @apply max-h-[90vh] overflow-y-auto overscroll-auto;
 }
 .otp-field__input{
-  @apply w-12 h-12 rounded-md mr-2 text-center border-gray-300 focus:outline-none focus:ring-2 focus:ring-Renegan-gold focus:border-transparent
+  @apply w-12 h-12 rounded-md mr-2 text-center border-gray-300 focus:outline-none focus:ring-2 focus:ring-renegan-purple focus:border-transparent
 }
 .otp-field{
 display: flex;
@@ -138,7 +138,7 @@ header.dTgEdo{
   @apply flex items-center space-x-4 cursor-pointer
 }
 .navbar-link.active{
-@apply text-Renegan-gold
+@apply text-renegan-purple
 }
 
 .card-active{

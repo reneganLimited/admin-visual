@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
     CustomerToUpdate,
-    updateUser,
 } from "../../redux/slices/CustomerSlice";
 import { AppDispatch, RootState } from "../../redux/store";
 import Modal from "../../components/Modal";
@@ -47,7 +46,6 @@ const ConfirmLoginActivityModal = ({
                 Name: name,
                 UserEmail: customer.Email,
             };
-            await dispatch(updateUser(customerPayload));
         }
     };
 

@@ -1,9 +1,7 @@
 // src/redux/slices/userSlice.js
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import * as v2 from "../../apiV2";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import * as API from "../../apiV1";
 import { createDraft } from "immer";
-import { VirtualAccountProviderKYCEntity } from "../../types";
-
 export interface AccountModificationInput {
   UserID: string;
   ModifiedBy: string;
@@ -60,64 +58,6 @@ interface SearchResult {
   State: string;
 }
 
-// export const modifyAccount = createAsyncThunk(
-//     'customer/modifyAccount',
-//     async (details: AccountModificationInput, thunkAPI) => {
-//         const response = await v2.updateAccount(details.UserID, details);
-//         return response.data.closeAccount;
-//     }
-// );
-export const fetchUserByEmail = createAsyncThunk(
-  "customer/fetchByEmail",
-  async (email: string, thunkAPI) => {
-    try {
-      const user = await v2.getUserByEmail(email);
-      return user;
-    } catch (error: any) {
-      // Return the custom error message from the server
-      console.error("Error obj:", error);
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || "Failed to fetch user by email",
-      );
-    }
-  },
-);
-
-export const fetchUserByName = createAsyncThunk(
-  "customer/fetchByName",
-  async (
-    name: {
-      firstName: string;
-      middleName: string;
-      lastName: string;
-    },
-    thunkAPI,
-  ) => {
-    try {
-      const user = await v2.getUserByName(name);
-      return user;
-    } catch (error: any) {
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || "Failed to fetch user by email",
-      );
-    }
-  },
-);
-
-export const updateUser = createAsyncThunk(
-  "customer/updateUser",
-  async (userDetails: CustomerToUpdate, thunkAPI) => {
-    try {
-      const response = await v2.updateAccount(userDetails.UserID, userDetails);
-      return response;
-    } catch (error: any) {
-      // Return the custom error message from the server
-      return thunkAPI.rejectWithValue(
-        error.response.data.message || "Failed to update user",
-      );
-    }
-  },
-);
 
 const CustomerSlice = createSlice({
   name: "customer",
@@ -159,52 +99,6 @@ const CustomerSlice = createSlice({
     setLoginModal: (state, action: PayloadAction<boolean>) => {
       state.showLoginModal = action.payload;
     },
-  },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchUserByEmail.pending, (state) => {
-        state.status = "loading";
-        state.customer = {} as Customer;
-        state.error = undefined;
-      })
-      .addCase(fetchUserByEmail.fulfilled, (state, action) => {
-        state.status = "succeeded";
-        state.customer = action.payload;
-        state.error = undefined;
-      })
-      .addCase(fetchUserByEmail.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.payload;
-      })
-      .addCase(updateUser.pending, (state) => {
-        state.status = "loading";
-        state.error = undefined;
-      })
-      .addCase(updateUser.fulfilled, (state, action) => {
-        state.status = "succeeded";
-        if (action.payload.data.User) {
-          state.customer = action.payload.data.User;
-        } else {
-          state.error = action.payload.data.Body.message;
-        }
-      })
-      .addCase(updateUser.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.payload;
-      })
-      .addCase(fetchUserByName.pending, (state) => {
-        state.status = "loading";
-        state.searchResults = [];
-        state.error = undefined;
-      })
-      .addCase(fetchUserByName.fulfilled, (state, action) => {
-        state.status = "succeeded";
-        state.searchResults = action.payload;
-      })
-      .addCase(fetchUserByName.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.payload;
-      });
   },
 });
 

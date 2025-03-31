@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux"
 import {AppDispatch, RootState} from "../../redux/store"
 import {
   clearSearchResults,
-  fetchUserByEmail,
 } from "../../redux/slices/CustomerSlice"
 
 export default function SearchResults() {
@@ -14,7 +13,6 @@ export default function SearchResults() {
   )
 
   const handleSelectResult = (result: any) => {
-    dispatch(fetchUserByEmail(result?.Email));
     dispatch(clearSearchResults()); // Clear dropdown after selecting
   }
 

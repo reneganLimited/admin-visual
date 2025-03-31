@@ -4,8 +4,6 @@ import {useState} from "react"
 import {useDispatch} from "react-redux"
 import {
     clearSearchResults,
-  fetchUserByEmail,
-  fetchUserByName,
 } from "../../redux/slices/CustomerSlice"
 import {AppDispatch} from "../../redux/store"
 import Button from "../../components/Button"
@@ -39,13 +37,7 @@ export default function CustomerSearch() {
   }
 
   const handleSearch = () => {
-    if (searchBy === SearchBy.Email) {
-      dispatch(clearSearchResults()) // Clear dropdown after selecting
-        dispatch(fetchUserByEmail(email))
-    } else if (searchBy === SearchBy.Name) {
-      dispatch(clearSearchResults()) // Clear dropdown after selecting
-      dispatch(fetchUserByName({firstName, middleName, lastName}))
-    }
+   
   }
 
   return (

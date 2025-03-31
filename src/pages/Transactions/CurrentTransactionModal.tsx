@@ -8,7 +8,7 @@ import {
   setIsNoteOpen,
   setOneTransaction,
 } from "../../redux/slices/TransactionsSlice"
-import {getAddress, getFlagReason} from "../../constants"
+import {getAddress} from "../../constants"
 import {
   StateColor,
   DepositColor,
@@ -140,19 +140,6 @@ const CurrentTransactionModal = ({loading, refresh}: IProps) => {
                     </p>
                   )}
 
-                  <p className={pStyle}>
-                    Transaction State <br />
-                    <span
-                      className={
-                        "font-bold " +
-                        StateColor(oneTransaction?.TransactionState)
-                      }
-                    >
-                      {oneTransaction?.TransactionState === "FLAGGED"
-                        ? `FLAGGED (${getFlagReason(oneTransaction)})`
-                        : oneTransaction?.TransactionState}
-                    </span>
-                  </p>
                 </div>
                 <div className="flex flex-col p-4">
                   <p className={pStyle}>

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { CustomerToUpdate, updateUser } from "../../redux/slices/CustomerSlice";
+import { CustomerToUpdate } from "../../redux/slices/CustomerSlice";
 import { AppDispatch, RootState } from "../../redux/store";
 import { useState } from "react";
 import SmallModal from "../../components/SmallModal";
@@ -49,7 +49,6 @@ const ConfirmationCloseAccountModal = ({
           UserEmail: customer.Email,
         };
 
-        await dispatch(updateUser(customerPayload));
         toast.success("User account updated successfully.");
       }
     } catch (err) {

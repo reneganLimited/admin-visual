@@ -2,7 +2,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import Modal from "../../components/Modal";
 import Button from "../../components/Button";
-import { returnV4UsdCreditTransaction } from "../../apiv4";
+// import { returnV4UsdCreditTransaction } from "../../apiv4";
 import { TransactionStateEnum } from "../../types";
 
 interface IProps {
@@ -27,10 +27,10 @@ const ConfirmReturnV4TransactionModal = ({
       setLoading(true);
       setLoader(true);
       
-      await returnV4UsdCreditTransaction({
-        TransactionIdentifier: transactionId!,
-        NewTransactionState: TransactionStateEnum.RETURNED
-      });
+      // await returnV4UsdCreditTransaction({
+      //   TransactionIdentifier: transactionId!,
+      //   NewTransactionState: TransactionStateEnum.RETURNED
+      // });
 
       toast.success("Transaction returned successfully");
       setIsConfirmOpen(false);

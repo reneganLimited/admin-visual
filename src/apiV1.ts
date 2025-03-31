@@ -58,6 +58,12 @@ export const updateUser = async (UserID: string, payload: any) => {
   );
 };
 
+export const getUser = async (UserID: string) => {
+  return await axios.get(
+    `${AWS_CREDS.ADMIN_API_URL}/admin/users/${UserID}`,
+  );
+}
+
 function removeEmptyParams(params: any) {
   Object.keys(params).forEach((key) => {
     if (params[key] === null || params[key] === undefined) {
@@ -65,4 +71,5 @@ function removeEmptyParams(params: any) {
     }
   });
 }
+
 

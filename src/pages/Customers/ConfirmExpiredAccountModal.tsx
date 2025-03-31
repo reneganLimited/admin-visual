@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { AccountState } from "../../types";
 import { toast } from "react-toastify";
-import { CustomerToUpdate, updateUser } from "../../redux/slices/CustomerSlice";
+import { CustomerToUpdate } from "../../redux/slices/CustomerSlice";
 interface IProps {
   isModalOpen: boolean;
   setIsConfirmOpen: (state: boolean) => void;
@@ -41,7 +41,6 @@ const ConfirmExpiredAccountModal = ({
           Name: name,
           UserEmail: customer?.Email,
         };
-        await dispatch(updateUser(customerPayload));
       }
     } catch (err) {
       toast.error(`An error occurred while updating user state`);

@@ -3,7 +3,7 @@ import { lazy } from "react";
 import MainLayout from "./components/Layouts/MainLayout";
 import { Error404 } from "./pages/Error404";
 import Transactions from "./pages/Transactions";
-import CustomerManagement from "./pages/Customer";
+import CustomerManagement from "./pages/Customers";
 
 const Login = lazy(() => import("./Login"));
 

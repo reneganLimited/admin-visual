@@ -5,7 +5,7 @@ import Modal from "../../components/Modal";
 import Button from "../../components/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { flagV4Transaction } from "../../apiv4";
+// import { flagV4Transaction } from "../../apiv4";
 import { toast } from "react-toastify";
 import { NoteRequestData, TransactionStateEnum } from "../../types";
 import { useState } from "react";
@@ -40,7 +40,7 @@ const ConfirmFlagTransactionModal = ({ isModalOpen, setIsFlagTransactionOpen, re
     try {
       console.log(`Flagging transaction with ID: ${transaction?.TransactionIdentifier}`);
       const newState = TransactionStateEnum.FLAGGED;
-      await flagV4Transaction(transaction?.TransactionIdentifier!, note, newState);
+      // await flagV4Transaction(transaction?.TransactionIdentifier!, note, newState);
       toast.success(`Transaction with Identifier: ${transaction?.TransactionIdentifier} is now ${newState}`);
       refresh && (await refresh());
     } catch (err: any) {

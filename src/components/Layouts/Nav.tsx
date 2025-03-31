@@ -54,7 +54,7 @@ export default function Nav(props: iNav) {
         </>
         <div className="flex items-center w-[40%] md:w-[12rem] justify-evenly">
           <div className="flex float-right mr-0">
-            {title === Category.Transactions &&<Button
+            {/* {title === Category.Transactions &&<Button
               text="Create Transaction"
               iconLeft={true}
               icon={
@@ -64,7 +64,7 @@ export default function Nav(props: iNav) {
                 window.location.href = "/transactions/create"
               }}
               style={`float-right hover:bg-gray-400 px-4 py-3 m-0 rounded-md bg-orange text-black h-12`}
-            />}
+            />} */}
           </div>
         </div>
       </section>
