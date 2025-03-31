@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "inter", sans-serif;
+  font-display: swap;
+}
+
+.login-card {
+  @apply border border-[#F5F5F5] rounded-lg bg-[#FFFFFF];
+  box-shadow: 0px 3px 4px rgba(200, 200, 200, 0.25);
+}
+
+.PhoneInputInput{
+  padding-left: 10px !important;
+}
+
+@layer base {
+  input, select {
+    @apply px-3 float-left sm:w-6/12 mr-1 mt-1 pr-8 text-[13px] font-bold py-3 border rounded-md shadow-sm shadow-[#d3d3d3] focus:ring-Renegan-gold focus:border-Renegan-gold h-12 !important;
+}
+}
+
+input, select{
+  @apply flex w-auto min-w-[230px] !important;
+  color: #000 !important;
+}
+
+.input-control, .password-control {
+  @apply w-full !important;
+  color: #000 !important;
+}
+
+label {
+  @apply text-sm font-medium text-black-soft mt-4;
+}
+
+p {
+  @apply text-sm font-medium text-black-soft
+}
+
+select {
+  @apply bg-[#f1f1f1];
+  color: #000 !important;
+}
+
+
+button {
+  @apply h-12 rounded-md py-3 px-3 mt-1 justify-center whitespace-nowrap !important;
+}
+
+.toggle-checkbox {
+  padding: 0px !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 10px !important;
+}
+
+
+.custom-toggle-checkbox {
+  padding: 0px !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 10px !important;
+  border-radius: none !important;
+  border: 1px solid #111111;
+}
+
+.confirm-button {
+  @apply px-10 py-1 mt-10 text-[#FFF] !important;
+}
+
+.input-control {
+  @apply block w-full px-3 py-3 placeholder-gray-400 border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] sm:text-sm;
+}
+
+.password-control {
+  @apply py-3 px-3 w-full placeholder-gray-400 border-r-0  rounded-l-lg border border-black shadow-sm focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9];
+}
+.search-input {
+  @apply py-2 px-2 focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] border-black shadow-sm rounded-md placeholder:text-gray-400;
+}
+.password-button {
+  @apply bg-transparent rounded-r-lg px-3 py-3 focus:outline-none border border-black focus:ring-2 focus:ring-Renegan-gold focus:border-transparent bg-[#F9F9F9];
+}
+.login-active {
+  @apply flex bg-Renegan-gold justify-center w-full px-4 py-3 text-sm font-bold text-black border border-transparent rounded-md focus:outline-none;
+}
+.login-disabled {
+  @apply flex bg-[#F9F9F9] justify-center w-full px-4 py-3 text-sm font-bold text-[#ACACAC] border border-transparent rounded-md focus:outline-none;
+}
+.PhoneInputCountrySelect {
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-Renegan-gold h-full rounded-md border-0 bg-transparent;
+}
+.PhoneInputCountry {
+  @apply absolute inset-y-0 left-0 flex items-center pl-4;
+}
+.PhoneInputInput {
+  @apply block w-full py-3 pl-[3.6rem] border border-black rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-Renegan-gold focus:border-Renegan-gold bg-[#F9F9F9] sm:text-sm;
+}
+.register-card {
+  @apply max-h-[90vh] overflow-y-auto overscroll-auto;
+}
+.otp-field__input{
+  @apply w-12 h-12 rounded-md mr-2 text-center border-gray-300 focus:outline-none focus:ring-2 focus:ring-Renegan-gold focus:border-transparent
+}
+.otp-field{
+display: flex;
+}
+.dNHUrz svg{
+  display: none!important;
+}
+.bg-cancel{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #FFBD59;
+}
+
+header.dTgEdo{
+  /* justify-content: space-between!important; */
+}
+.dILRuI{
+  background-color: #FAFAFA!important;
+  font-weight: 600!important;
+}
+.cIdNNF, .kBksXg{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
+.border-min{
+  margin-bottom: -2px;
+}
+
+.navbar-link{
+  @apply flex items-center space-x-4 cursor-pointer
+}
+.navbar-link.active{
+@apply text-Renegan-gold
+}
+
+.card-active{
+  @apply text-white text-[16px] font-medium leading-tight md:w-48
+}
+
+.card-inactive{
+  @apply opacity-60 text-gray-200 text-[18px] font-medium leading-tight w-36 pt-3
+} 
+
+
+.responsive-layout{
+ 
+  @apply w-[90%] min-[2000px]:w-[1440px] m-auto 
+ }
+ 
+ .link {
+  color: rgb(99, 99, 255) !important;
+ }

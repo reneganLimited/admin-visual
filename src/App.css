@@ -1,0 +1,373 @@
+.bg-green{
+  background-color: green !important;
+}
+.bg-blue{
+  background-color: rgb(0, 83, 128) !important;
+}
+.bg-danger{
+  background-color: rgb(221, 13, 6) !important;
+}
+.padding {
+  padding: 15px !important;
+}
+.link,.blue{
+  color: #179ce4;
+}
+.danger{
+  color: #e42817;
+}
+.yellow, .text-gold{
+  color: #e4bb17 !important;
+}
+.green, .text-green{
+  color: #06ab2f !important;
+}
+.grey, .text-grey{
+  color: #b7b7b7 !important;
+}
+
+a{
+  cursor: pointer;
+}
+.black{
+  color: black;
+}
+
+.border-gold {
+  border-right:2px solid #e4bb17 !important;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.scrollBarSettings::-webkit-scrollbar {
+  display: none;
+}
+
+.hideArrow{
+  display: none;
+}
+.showArrow:hover .hideArrow{
+  display: block;
+}
+
+.swal2-icon.swal2-question{
+  font-size: 24px!important;
+  /* color: red!important; */
+}
+.swal2-confirm{
+  background: #FFBD59!important;
+  margin-top: 13px!important;
+  border: none!important;
+}
+.swal2-html-container{
+  margin: 0!important;
+}
+
+.skeleton-box {
+  position: relative;
+  overflow: hidden;
+  background-color: #e2e8f0;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.2) 20%,
+      rgba(255, 255, 255, 0.5) 60%,
+      rgba(255, 255, 255, 0)
+    );
+    animation: shimmer 3s infinite;
+    content: '';
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+.bg-modal-overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for transparency */
+z-index: 30;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.border-danger{
+    border: #e42817 !important;
+}
+
+.bg-orange{
+  border:2px solid #df8600 !important;
+  background-color: #df8600 !important;
+}
+
+
+.bg-grey{
+  border:2px solid #c5c5c5 !important;
+  background-color: #e0e0e0 !important;
+}
+
+.bg-purple{
+  border:2px solid #5123b5 !important;
+  background-color: #7535fd !important;
+}
+
+.border-orange{
+  border:2px solid #df8600 !important;
+}
+
+.orange{
+  color: #df8600 !important;
+}
+
+hr{
+  margin-bottom: 15px !important;
+}
+
+
+ul {
+  list-style-type: disc; /* Bullet point style (can also use 'circle', 'square', etc.) */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Style list items (li) */
+li {
+  margin-bottom: 5px; /* Spacing between list items */
+  padding-left: 20px; /* Indentation from the left */
+  position: relative; /* To add custom bullet points */
+}
+
+.font-small{
+  font-size: 14px !important;
+}
+
+/* Custom bullet point styles */
+li:before {
+  content: '\2022'; /* Unicode character for a bullet (you can change it) */
+  position: absolute;
+  left: 0;
+  margin-left: -20px; /* Adjust to align with text */
+  color: #333; /* Bullet point color */
+}
+
+.pdf-display {
+  max-width: 500px !important;
+  max-height: 600px !important;
+  overflow: scroll;
+}
+
+.pdf-display .pdf-display__canvas {
+  max-width: 600px !important;
+  max-height: 600px !important;
+}
+
+.pdf-display canvas {
+  max-width: 600px !important;
+  max-height: 600px !important;
+}
+
+.scroll-box {
+  width: 100% !important;
+  margin: auto;
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #333;
+  margin: 2px;
+}
+
+fieldset {
+  /* width: 100vw !important; */
+  height: auto !important;
+  border-radius: 10px !important;
+  background-color: #ffffff;
+  word-wrap: break-word !important;
+  overflow: hidden !important;
+}
+.bg-none {
+  background-color: none !important;
+}
+
+.modal-padding{
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.grey {
+  color: rgb(32, 27, 17) !important;
+  font-style: italic !important;
+}
+
+.bg-gold{
+  border:2px solid #805413 !important;
+  background-color: #775015 !important;
+  color: #e2e8f0 !important;
+  font-weight: bold !important;
+}
+
+.bg-offwhite {
+  background-color: #F9F9F9 !important;
+  }
+
+  .bg-yellow {
+    background-color: #FFBD59 !important;
+  }
+
+.red {
+  color: #e42817;
+}
+
+.border-black {
+  border: 1px solid black !important;
+}
+tr {
+  cursor: pointer !important;
+}
+.link-preview {
+  border: 1px solid #ccc;
+  background-color: #e1dede5f;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+.link-preview img {
+  max-width: 100px;
+  margin: 10px;
+  flex-shrink: 0; /* Prevent the image from shrinking too much */
+  float:left;
+}
+
+.preview-details {
+  flex-grow: 1; /* Allow details to take up remaining space */
+  min-width: 0; /* Prevent overflow issues */
+}
+
+.preview-details h3 {
+  margin: 0;
+  font-size: 16px;
+  font-size: clamp(14px, 4vw, 16px); /* Responsive font size */
+}
+
+.preview-details p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.preview-details a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-word; /* Ensure long URLs break properly */
+}
+
+@media (max-width: 600px) {
+  .link-preview {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center align for a better mobile layout */
+  }
+
+  .link-preview img {
+    margin-right: 0;
+    margin-bottom: 15px; /* Add margin at the bottom when stacked */
+    max-width: 80px; /* Adjust image size for smaller screens */
+  }
+
+  .preview-details h3 {
+    font-size: 14px; /* Slightly smaller text on mobile */
+  }
+
+  .preview-details p {
+    font-size: 12px; /* Adjust font size for readability */
+  }
+}
+
+
+.custom-limits-section {
+  background-color: #f9f9f9; /* Light background for the section */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0; /* Subtle border */
+  height: auto;
+  float: left;
+  width: 100%;
+}
+
+.custom-limits-section h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Darker text for the heading */
+  margin-bottom: 15px;
+}
+
+.custom-limits-section label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.custom-limits-section select,
+.custom-limits-section input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.custom-limits-section select:focus,
+.custom-limits-section input:focus {
+  outline: none;
+  border-color: #007bff; /* Highlight on focus */
+}
+
+.custom-limits-section select {
+  background-color: #fff;
+}
+
+.custom-limits-section input {
+  background-color: #fff;
+}
+
+.custom-limits-section .btn-save {
+  background-color: #007bff; /* Save button color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-limits-section .btn-save:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+.text-red {
+  color:rgb(221, 13, 6) !important;
+}
